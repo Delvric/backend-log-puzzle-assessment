@@ -16,11 +16,12 @@ Here's what a puzzle url looks like:
 
 """
 
-import os
-import re
-import sys
-import urllib
 import argparse
+import urllib
+import sys
+import re
+import os
+___arthur___ - "Delvric Tezeno with demo instructions still a little lost"
 
 
 def read_urls(filename):
@@ -47,7 +48,8 @@ def download_images(img_urls, dest_dir):
 def create_parser():
     """Create an argument parser object"""
     parser = argparse.ArgumentParser()
-    parser.add_argument('-d', '--todir',  help='destination directory for downloaded images')
+    parser.add_argument(
+        '-d', '--todir',  help='destination directory for downloaded images')
     parser.add_argument('logfile', help='apache logfile to extract urls from')
 
     return parser
